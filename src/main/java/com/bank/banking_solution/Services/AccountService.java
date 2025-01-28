@@ -75,6 +75,6 @@ public class AccountService {
 }
 
     public List<Account> getCustomerAccounts(UUID customerId) {
-        return accountRepository.findByOwnerId(customerId);
+        return accountRepository.findByOwnerIdOrderByCreatedAtDesc(customerId);
     }
 }

@@ -11,6 +11,6 @@ import com.bank.banking_solution.Models.Account;
 @Repository
 public interface AccountRepository extends JpaRepository<Account, UUID> {
 
-    List<Account> findByOwnerId(UUID customerId);
+    List<Account> findByOwnerIdOrderByCreatedAtDesc(UUID customerId);
 
 }
